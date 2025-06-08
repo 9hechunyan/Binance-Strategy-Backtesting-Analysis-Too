@@ -1,52 +1,83 @@
-<html>
-<head>
-<title>交易策略分析报告</title>
-    <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    table { border-collapse: collapse; width: 100%; margin: 20px 0; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    th { background-color: #f2f2f2; }
-    .container { max-width: 1200px; margin: 0 auto; }
-    </style>
-</head>
-<body>
-<div class="container">
-    <h1>交易策略分析报告</h1>
-    
-    <h2>策略表现摘要</h2>
-    <table>
-        <tr>
-            <th>指标</th>
-            <th>数值</th>
-        </tr>
-        <tr>
-            <td>总收益率</td>
-            <td>-6.27%</td>
-        </tr>
-        <tr>
-            <td>年化收益率</td>
-            <td>-100.00%</td>
-        </tr>
-        <tr>
-            <td>最大回撤</td>
-            <td>-10.36%</td>
-        </tr>
-        <tr>
-            <td>胜率</td>
-            <td>10.53%</td>
-        </tr>
-        <tr>
-            <td>夏普比率</td>
-            <td>-0.61</td>
-        </tr>
-        <tr>
-            <td>平均持仓时间</td>
-            <td>0.00小时</td>
-        </tr>
-    </table>
 
-    <h2>月度收益分析</h2>
-    <table border="1" class="dataframe table">
+    <html>
+    <head>
+        <title>交易策略分析报告</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f5f5f5; }
+            .positive { color: green; }
+            .negative { color: red; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>交易策略分析报告</h1>
+            
+            <h2>策略表现指标</h2>
+            <table>
+                <tr>
+                    <th>指标</th>
+                    <th>数值</th>
+                </tr>
+                <tr>
+                    <td>总收益率</td>
+                    <td class="negative">-32.59%</td>
+                </tr>
+                <tr>
+                    <td>年化收益率</td>
+                    <td class="negative">-14.94%</td>
+                </tr>
+                <tr>
+                    <td>最大回撤</td>
+                    <td class="negative">-40.28%</td>
+                </tr>
+                <tr>
+                    <td>胜率</td>
+                    <td>0.23%</td>
+                </tr>
+                <tr>
+                    <td>夏普比率</td>
+                    <td class="negative">-0.13</td>
+                </tr>
+                <tr>
+                    <td>平均持仓时间</td>
+                    <td>16.0小时</td>
+                </tr>
+                <tr>
+                    <td>最大回撤持续时间</td>
+                    <td>17780.0小时</td>
+                </tr>
+            </table>
+            
+            <h2>与Buy-and-Hold策略对比</h2>
+            <table>
+                <tr>
+                    <th>指标</th>
+                    <th>策略</th>
+                    <th>Buy-and-Hold</th>
+                </tr>
+                <tr>
+                    <td>总收益率</td>
+                    <td class="negative">-32.59%</td>
+                    <td class="positive">536.92%</td>
+                </tr>
+                <tr>
+                    <td>年化收益率</td>
+                    <td class="negative">-14.94%</td>
+                    <td class="positive">1.14%</td>
+                </tr>
+                <tr>
+                    <td>最大回撤</td>
+                    <td class="negative">-40.28%</td>
+                    <td class="negative">-32.31%</td>
+                </tr>
+            </table>
+            
+            <h2>月度收益</h2>
+            <table border="1" class="dataframe table">
   <thead>
     <tr style="text-align: right;">
       <th>月份</th>
@@ -55,69 +86,131 @@
   </thead>
   <tbody>
     <tr>
-      <td>1970-01</td>
-      <td>-6.273176</td>
+      <td>2023-01</td>
+      <td>4.55%</td>
+    </tr>
+    <tr>
+      <td>2023-02</td>
+      <td>1.03%</td>
+    </tr>
+    <tr>
+      <td>2023-03</td>
+      <td>0.38%</td>
+    </tr>
+    <tr>
+      <td>2023-04</td>
+      <td>-7.05%</td>
+    </tr>
+    <tr>
+      <td>2023-05</td>
+      <td>-0.14%</td>
+    </tr>
+    <tr>
+      <td>2023-06</td>
+      <td>-2.10%</td>
+    </tr>
+    <tr>
+      <td>2023-07</td>
+      <td>-7.15%</td>
+    </tr>
+    <tr>
+      <td>2023-08</td>
+      <td>-6.32%</td>
+    </tr>
+    <tr>
+      <td>2023-09</td>
+      <td>-5.62%</td>
+    </tr>
+    <tr>
+      <td>2023-10</td>
+      <td>10.17%</td>
+    </tr>
+    <tr>
+      <td>2023-11</td>
+      <td>1.19%</td>
+    </tr>
+    <tr>
+      <td>2023-12</td>
+      <td>-0.44%</td>
+    </tr>
+    <tr>
+      <td>2024-01</td>
+      <td>-2.60%</td>
+    </tr>
+    <tr>
+      <td>2024-02</td>
+      <td>6.70%</td>
+    </tr>
+    <tr>
+      <td>2024-03</td>
+      <td>4.85%</td>
+    </tr>
+    <tr>
+      <td>2024-04</td>
+      <td>-13.57%</td>
+    </tr>
+    <tr>
+      <td>2024-05</td>
+      <td>4.40%</td>
+    </tr>
+    <tr>
+      <td>2024-06</td>
+      <td>-3.94%</td>
+    </tr>
+    <tr>
+      <td>2024-07</td>
+      <td>-5.70%</td>
+    </tr>
+    <tr>
+      <td>2024-08</td>
+      <td>1.74%</td>
+    </tr>
+    <tr>
+      <td>2024-09</td>
+      <td>-0.01%</td>
+    </tr>
+    <tr>
+      <td>2024-10</td>
+      <td>2.00%</td>
+    </tr>
+    <tr>
+      <td>2024-11</td>
+      <td>-3.99%</td>
+    </tr>
+    <tr>
+      <td>2024-12</td>
+      <td>-5.93%</td>
+    </tr>
+    <tr>
+      <td>2025-01</td>
+      <td>-2.19%</td>
+    </tr>
+    <tr>
+      <td>2025-02</td>
+      <td>-6.97%</td>
+    </tr>
+    <tr>
+      <td>2025-03</td>
+      <td>3.65%</td>
+    </tr>
+    <tr>
+      <td>2025-04</td>
+      <td>4.36%</td>
+    </tr>
+    <tr>
+      <td>2025-05</td>
+      <td>-3.48%</td>
+    </tr>
+    <tr>
+      <td>2025-06</td>
+      <td>-2.16%</td>
     </tr>
   </tbody>
 </table>
-
-    <h2>价格统计</h2>
-    <table>
-        <tr>
-            <th>指标</th>
-            <th>数值</th>
-            <th>时间</th>
-        </tr>
-        <tr>
-            <td>最高价</td>
-            <td>109588.00</td>
-            <td>115</td>
-        </tr>
-        <tr>
-            <td>最低价</td>
-            <td>76606.00</td>
-            <td>414</td>
-        </tr>
-        <tr>
-            <td>平均交易量</td>
-            <td>4663.02</td>
-            <td>-</td>
-        </tr>
-    </table>
-
-    <h2>交易记录</h2>
-    <p>总交易次数: 38</p>
-    <p>买入信号次数: 19</p>
-    <p>卖出信号次数: 19</p>
-    <p>平均持仓时间: 0.00小时</p>
-    <p>最大回撤持续时间: 0.00小时</p>
-
-    <h2>与Buy-and-Hold策略对比</h2>
-    <table>
-        <tr>
-            <th>指标</th>
-            <th>策略</th>
-            <th>Buy-and-Hold</th>
-        </tr>
-        <tr>
-            <td>总收益率</td>
-            <td>-6.27%</td>
-            <td>-11.59%</td>
-        </tr>
-        <tr>
-            <td>年化收益率</td>
-            <td>-100.00%</td>
-            <td>-100.00%</td>
-        </tr>
-        <tr>
-            <td>最大回撤</td>
-            <td>-10.36%</td>
-            <td>-27.39%</td>
-        </tr>
-    </table>
-
-    <h2>图表分析</h2>
-    <p>请查看生成的 <a href="../reports/trading_analysis.html">trading_analysis.html</a> 文件获取详细图表分析。</p>
-</div>
-</body>
-</html> 
+            
+            <h2>图表分析</h2>
+            <p>请查看生成的 <a href="reports/trading_analysis.html">trading_analysis.html</a> 文件获取详细图表分析。</p>
+        </div>
+    </body>
+    </html>
+    
